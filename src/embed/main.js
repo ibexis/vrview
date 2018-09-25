@@ -184,6 +184,7 @@ function onSetContent(e) {
     var url = scene.getCurrentUrl();
     //console.log('Updating url to be %s', url);
     window.history.pushState(null, 'VR View', url);
+    event.videoElement.play();
 
     // And set the new scene.
     return worldRenderer.setScene(scene);
